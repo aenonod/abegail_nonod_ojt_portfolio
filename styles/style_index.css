@@ -27,10 +27,17 @@ body {
 
 .nav-texts-left p {
     font-family: 'Bebas Neue', sans-serif;
-    color: #f4f1ea; 
+    color: #EAE0C8; 
     font-size: 24px;
     line-height: 1.2;
     letter-spacing: 1px;
+    font-weight: bold; 
+    
+    text-shadow: 
+        -1.5px -1.5px 0 #000,  
+         1.5px -1.5px 0 #000,
+        -1.5px  1.5px 0 #000,
+         1.5px  1.5px 0 #000;
 }
 
 .nav-links-right {
@@ -42,15 +49,20 @@ body {
 .navbar a {
     text-decoration: none;
     font-family: 'Bebas Neue', sans-serif; 
-    font-weight: 400; 
+    font-weight: bold; 
     font-size: 20px;
-    color: #f4f1ea; 
+    color: #EAE0C8; 
     text-transform: uppercase;
     letter-spacing: 1.5px;
     transition: color 0.3s ease, opacity 0.3s ease;
-    
     padding: 0 20px;
-    border-right: 1px solid #2d3540;
+    border-right: 1px solid #2d3540; 
+    
+    text-shadow: 
+        -1.5px -1.5px 0 #000,  
+         1.5px -1.5px 0 #000,
+        -1.5px  1.5px 0 #000,
+         1.5px  1.5px 0 #000;
 }
 
 .navbar a:last-child {
@@ -63,7 +75,7 @@ body {
 }
 
 .navbar a.active {
-    color: #f4f1ea; 
+    color: #c99317; 
 }
 
 .hamburger-btn {
