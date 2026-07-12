@@ -227,3 +227,36 @@ body {
     font-size: 24px;
     margin-bottom: 30px;
 }
+
+/* ---------- Icon Grid Layout ---------- */
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 45px 30px; 
+}
+
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.icon-item:hover {
+    transform: scale(1.10); 
+}
+
+.icon-item img {
+    width: 64px;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+.icon-item p {
+    font-family: 'Google Sans Flex', sans-serif;
+    color: #030303; 
+    font-size: 15px;
+    line-height: 1.3;
+}
