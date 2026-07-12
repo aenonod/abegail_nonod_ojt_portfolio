@@ -25,3 +25,33 @@ btnFiles.addEventListener('click', () => {
     contentFiles.classList.add('active');
     contentGallery.classList.remove('active');
 });
+
+
+// PDF Modal Logic
+const pdfTriggers = document.querySelectorAll('.pdf-trigger');
+const pdfModal = document.getElementById('pdf-modal');
+const pdfFrame = document.getElementById('pdf-frame');
+const closeModal = document.getElementById('close-modal');
+
+// Open Modal when a PDF icon is clicked
+pdfTriggers.forEach(trigger => {
+    trigger.addEventListener('click', () => {
+        const pdfPath = trigger.getAttribute('data-pdf');
+        pdfFrame.src = pdfPath; 
+        pdfModal.style.display = 'flex'; 
+    });
+});
+
+// Close Modal when the "X" is clicked
+closeModal.addEventListener('click', () => {
+    pdfModal.style.display = 'none';
+    pdfFrame.src = ""; 
+});
+
+// Close Modal if the user clicks anywhere in the dark background outside the box
+window.addEventListener('click', (e) => {
+    if (e.target === pdfModal) {
+        pdfModal.style.display = 'none';
+        pdfFrame.src = ""; 
+    }
+});
