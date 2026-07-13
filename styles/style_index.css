@@ -399,3 +399,109 @@ body {
     transform: translateY(-3px); 
     opacity: 1; 
 }
+
+/* ---------- Gallery Grid & Polaroids ---------- */
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.polaroid {
+    cursor: pointer;
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    position: relative;
+}
+
+.polaroid:hover {
+    transform: scale(1.05) rotate(-2deg);
+    z-index: 10; 
+}
+
+.polaroid-inner {
+    background-color: #ffffff;
+    padding: 10px 10px 20px 10px; 
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+}
+
+.caption {
+    font-family: 'Google Sans Flex', sans-serif;
+    color: #333;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+/* Decorative Stars */
+.star-top-right, .star-bottom-left {
+    position: absolute;
+    color: #5b6987; 
+    font-size: 20px;
+    -webkit-text-stroke: 1px #fff; 
+}
+
+.star-top-right {
+    top: -10px;
+    right: -10px;
+    transform: rotate(15deg);
+}
+
+.star-bottom-left {
+    bottom: 5px;
+    left: -10px;
+    transform: rotate(-15deg);
+}
+
+/* ---------- Image Modal Styles ---------- */
+.image-modal-content {
+    position: relative;
+    max-width: 80%;
+    max-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#modal-image-display {
+    max-width: 100%;
+    max-height: 80vh;
+    border: 10px solid #fff;
+    border-radius: 4px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: #EAE0C8;
+    cursor: pointer;
+    padding: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-arrow:hover {
+    color: #ffffff;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-arrow {
+    left: -80px; 
+}
+
+.next-arrow {
+    right: -80px;
+}
