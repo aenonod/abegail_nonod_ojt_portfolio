@@ -135,7 +135,7 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 25px; /* Spacing between each pill */
+    gap: 25px; 
 }
 
 .contact-pill {
@@ -143,7 +143,7 @@ body {
     background-color: transparent; 
     border: 3px solid #EAE0C8;
     border-radius: 20px;
-    overflow: hidden; /* Keeps the cream accent tab inside the rounded corners */
+    overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -155,7 +155,7 @@ body {
 .pill-accent {
     width: 65px;
     background-color: #EAE0C8;
-    flex-shrink: 0; /* Prevents the tab from shrinking on smaller screens */
+    flex-shrink: 0; 
 }
 
 .pill-content {
@@ -165,7 +165,6 @@ body {
     justify-content: center;
 }
 
-/* Reusing the heavy outline text style for the headers */
 .pill-content h3, 
 .map-info h3 {
     font-family: 'Google Sans Flex', sans-serif; 
@@ -187,7 +186,7 @@ body {
 
 /* --- Right Column: Map Card --- */
 .contact-right-card {
-    flex: 1.2; /* Makes the map side slightly wider than the pills */
+    flex: 1.2; 
     background-color: transparent;
     border: 3px solid #EAE0C8;
     border-radius: 20px;
@@ -202,12 +201,12 @@ body {
 }
 
 .map-wrapper {
-    flex-grow: 1; /* Tells the map to fill all remaining height in the card */
+    flex-grow: 1;
     width: 100%;
     min-height: 350px;
     border-radius: 12px;
     overflow: hidden;
-    border: 2px solid #5b6987; /* Subtle inner border for the map */
+    border: 2px solid #5b6987; 
 }
 
 .map-wrapper iframe {
