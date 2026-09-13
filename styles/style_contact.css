@@ -1,0 +1,315 @@
+/* ---------- Reset & Base Resets (Safeguard) ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1a1e29; 
+    background-image: url('../assets/background/star_bg.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    font-family: 'Bebas Neue', sans-serif; 
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4a5768; 
+    height: 100px;
+    padding: 0 56px;
+    z-index: 100;
+    flex-shrink: 0;
+}
+
+.nav-texts-left p {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #EAE0C8; 
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    font-weight: bold; 
+    
+    text-shadow: 
+        -1.5px -1.5px 0 #000,  
+         1.5px -1.5px 0 #000,
+        -1.5px  1.5px 0 #000,
+         1.5px  1.5px 0 #000;
+}
+
+.nav-links-right {
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif; 
+    font-weight: bold; 
+    font-size: 20px;
+    color: #EAE0C8; 
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease, opacity 0.3s ease;
+    padding: 0 20px;
+    border-right: 1px solid #2d3540; 
+    
+    text-shadow: 
+        -1.5px -1.5px 0 #000,  
+         1.5px -1.5px 0 #000,
+        -1.5px  1.5px 0 #000,
+         1.5px  1.5px 0 #000;
+}
+
+.navbar a:last-child {
+    border-right: none;
+    padding-right: 0; 
+}
+
+.navbar a:hover {
+    opacity: 0.7;
+}
+
+.navbar a.active {
+    color: #c99317; 
+}
+
+.hamburger-btn {
+    display: none; 
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger-btn img {
+    width: 32px;
+    height: auto;
+    display: block;
+    filter: invert(100%);
+}
+
+@media (max-width: 768px) {
+    .nav-links-right {
+        display: none;
+    }
+    .hamburger-btn {
+        display: block;
+    }
+}
+
+/* ---------- Contact Section ---------- */
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0 100px 0;
+}
+
+.section-title-large {
+    font-family: 'Lora', serif;
+    font-size: 78px;
+    font-weight: normal;
+    color: #EAE0C8;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+.contact-container {
+    width: 1100px;
+    display: flex;
+    align-items: stretch; 
+    gap: 40px;
+}
+
+/* --- Left Column: Contact Pills --- */
+.contact-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Spacing between each pill */
+}
+
+.contact-pill {
+    display: flex;
+    background-color: transparent; 
+    border: 3px solid #EAE0C8;
+    border-radius: 20px;
+    overflow: hidden; /* Keeps the cream accent tab inside the rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-pill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.pill-accent {
+    width: 65px;
+    background-color: #EAE0C8;
+    flex-shrink: 0; /* Prevents the tab from shrinking on smaller screens */
+}
+
+.pill-content {
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Reusing the heavy outline text style for the headers */
+.pill-content h3, 
+.map-info h3 {
+    font-family: 'Google Sans Flex', sans-serif; 
+    font-weight: 900;
+    color: #EAE0C8;
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    text-shadow: 1.5px 1.5px 0 #000, -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000;
+}
+
+.pill-content p, 
+.map-info p {
+    font-family: 'Google Sans Flex', sans-serif;
+    color: #EAE0C8;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* --- Right Column: Map Card --- */
+.contact-right-card {
+    flex: 1.2; /* Makes the map side slightly wider than the pills */
+    background-color: transparent;
+    border: 3px solid #EAE0C8;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.map-info {
+    margin-bottom: 20px;
+}
+
+.map-wrapper {
+    flex-grow: 1; /* Tells the map to fill all remaining height in the card */
+    width: 100%;
+    min-height: 350px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid #5b6987; /* Subtle inner border for the map */
+}
+
+.map-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ---------- Footer ---------- */
+.footer-section {
+    padding: 60px 0 40px 0; 
+    background-color: transparent; 
+    font-family: 'Google Sans Flex', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-container {
+    width: 1100px; 
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: flex-start; 
+    gap: 120px;
+    margin-bottom: 20px;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; 
+}
+
+.description-col {
+    max-width: 350px; 
+}
+
+.footer-col h4 {
+    font-family: 'Google Sans Flex', sans-serif;
+    font-weight: bold;
+    color: #EAE0C8; 
+    font-size: 16px;
+    letter-spacing: normal;
+    margin-bottom: 5px; 
+}
+
+.footer-col p, 
+.footer-col a {
+    color: #EAE0C8; 
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+}
+
+.footer-col a:hover {
+    color: #ffffff; 
+}
+
+.footer-divider {
+    width: 100%; 
+    height: 1px;
+    background-color: #EAE0C8; 
+    opacity: 0.3; 
+    margin-bottom: 25px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.footer-copy p {
+    color: #EAE0C8;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px; 
+}
+
+.footer-socials a {
+    color: #EAE0C8;
+    font-size: 24px;
+    opacity: 0.8;
+    text-decoration: none;
+    transition: transform 0.3s ease, opacity 0.3s ease, color 0.3s ease;
+}
+
+.footer-socials a:hover {
+    transform: translateY(-3px);
+    opacity: 1; 
+    color: #ffffff; 
+}
+
+.footer-socials img:hover {
+    transform: translateY(-3px); 
+    opacity: 1; 
+}

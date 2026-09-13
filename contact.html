@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abegail Nonod | OJT Portfolio</title>
     <link rel="icon" type="image/png" href="assets/icons/web_icon.png">
-    <meta name="description" content="Company profile section of OJT 1 Portfolio">
+    <meta name="description" content="Contact me section of OJT 1 Portfolio">
 
     <!-- Google Fonts -->
-     <!-- Header Font -->
+    <!-- Header Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -23,7 +23,7 @@
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="styles/style_company.css">
+    <link rel="stylesheet" href="styles/style_contact.css">
 </head>
 <body>
 
@@ -36,9 +36,9 @@
         <nav class="nav-links-right" id="nav-right">
             <a href="index.html">HOME</a>
             <a href="about.html">ABOUT ME</a>
-            <a href="company.html" class="active">COMPANY PROFILE</a>
-            <a href="contact.html">CONTACT</a>
-        </nav>
+            <a href="company.html">COMPANY PROFILE</a>
+            <a href="contact.html" class="active">CONTACT</a>
+        </nav> 
 
         <!-- Mobile hamburger menu button -->
         <button class="hamburger-btn" id="hamburger-btn" type="button" aria-label="Toggle navigation menu">
@@ -46,44 +46,75 @@
         </button>
     </header>
 
-    <!-- ---------- Company Profile Section ---------- -->
-    <section class="company-section">
-        <div class="company-container">
-            <!-- Left Side: Title and Image -->
-            <div class="company-left">
-                <h1 class="company-title">Company Profile</h1>
-                <img src="assets/background/ntc_comprof.png" alt="NTC" class="laptop-img">
+    <!-- ---------- Contact Section ---------- -->
+    <section class="contact-section">
+        <h1 class="section-title-large">Contact Me</h1>
+        
+        <div class="contact-container">
+            
+            <!-- Left Side: Contact Pills -->
+            <div class="contact-left">
+                
+                <!-- Email -->
+                <div class="contact-pill">
+                    <div class="pill-accent"></div>
+                    <div class="pill-content">
+                        <h3>Email:</h3>
+                        <p>abegailenonod@gmail.com<br>abegailenonod@iskolarngbayan.pup.edu.ph</p>
+                    </div>
+                </div>
+
+                <!-- Facebook -->
+                <div class="contact-pill">
+                    <div class="pill-accent"></div>
+                    <div class="pill-content">
+                        <h3>Facebook:</h3>
+                        <p>Abegail Nonod</p>
+                    </div>
+                </div>
+
+                <!-- Instagram -->
+                <div class="contact-pill">
+                    <div class="pill-accent"></div>
+                    <div class="pill-content">
+                        <h3>Instagram:</h3>
+                        <p>@abeng.xiii</p>
+                    </div>
+                </div>
+
+                <!-- Github -->
+                <div class="contact-pill">
+                    <div class="pill-accent"></div>
+                    <div class="pill-content">
+                        <h3>Github:</h3>
+                        <p>Abegail Nonod / aenonod</p>
+                    </div>
+                </div>
+                
             </div>
 
-            <!-- Right Side: Info Card -->
-            <div class="company-right">  
-                <div class="info-block">
-                    <h3>OVERVIEW</h3>
-                    <p>Operating under the Department of Information and Communications Technology, the National Telecommunications Commission (NTC, or Pambansang Komisyon sa Telekomunikasyon) serves as the primary regulatory body for telecommunications in the Philippines. It is responsible for overseeing, controlling, and resolving disputes related to all telecom providers, as well as radio and television broadcasting networks nationwide.</p>
+            <!-- Right Side: Map Card -->
+            <div class="contact-right-card">
+                <div class="map-info">
+                    <h3>Work Location:</h3>
+                    <p>Sen. Miriam P. Defensor Santiago Avenue, East Triangle, Diliman, Quezon City 1101</p>
                 </div>
-
-                <div class="info-block">
-                    <h3>MANDATE</h3>
-                    <p>To regulate the installation, operation and maintenance of radio stations both for private and public use. (Radio Control Law, Act No. 3846, as amended)</p>
-                    <p>To regulate and supervise the provision of public telecommunications services (Radio Control Law, Act No. 3846, as amended and Public Telecommunications Policy Act of 1995, RA No. 7925)</p>
-                    <p>To manage the radio spectrum (Radio Control Law, Act No. 3846, as amended and Public Telecommunications Policy Act of 1995, RA No. 7925)</p>
-                    <p>To regulate and supervise radio and television broadcast stations, cable television (CATV) and pay television (EO No. 546 and EO No. 205)</p>
-                </div>
-
-                <div class="info-block">
-                    <h3>VISION</h3>
-                    <p>By 2030, the NTC is a digitally empowered and dynamic regulatory agency that ensures an inclusive, secure, and dependable connectivity.</p>
-                </div>
-
-                <div class="info-block">
-                    <h3>MISSION</h3>
-                    <p>Regulate and supervise telecommunications, broadcast, and ICT sectors through effective and efficient regulations that ensure affordable and reliable communication services and safeguard consumer welfare and protection.</p>
+                
+                <!-- Interactive Google Maps Iframe (Satellite View) -->
+                <div class="map-wrapper">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=National%20Telecommunications%20Commission%20Quezon%20City&t=k&z=17&ie=UTF8&iwloc=&output=embed" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </div>
+
         </div>
     </section>
 
-    <!-- Footer -->
+        <!-- Footer -->
     <footer class="footer-section">
         <div class="footer-container">
             
