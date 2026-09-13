@@ -10,11 +10,19 @@
 body {
     background-color: #1a1e29; 
     background-image: url('../assets/background/star_bg.png'); 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    background-attachment: fixed; 
-    font-family: 'Bebas Neue', sans-serif; 
+    background-size: auto; 
+    background-repeat: repeat; 
+    font-family: 'Bebas Neue', sans-serif;
+    animation: driftStars 100s linear infinite;
+}
+
+@keyframes driftStars {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -2000px -2000px; 
+    }
 }
 
 /* ---------- Navbar ---------- */
